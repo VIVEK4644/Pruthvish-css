@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        height: 300px;
+        width: 500px;
+        border: 2px solid black;
+        background-image: url('https://www.pmindia.gov.in/wp-content/uploads/2023/07/default_Thumbnails-03.jpg');
+        margin: auto;
+        background-size: cover;
+    }
+    .box::after {
+
+        content: '';
+        position: absolute;
+        height: 300px;
+        width: 500px;
+        background-color: rgba(255, 68, 0, 0.863);
+        background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/330px-Flag_of_India.svg.png');
+        /* opacity: 0.34; */
+        transition: 1s; 
+    }
+    .box::before {
+
+        content: '';
+        position: absolute;
+        height: 300px;
+        width: 500px;
+        background-color: rgba(255, 68, 0, 0.863);
+        background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/330px-Flag_of_India.svg.png');
+        /* opacity: 0.34; */
+        transition: 1s; 
+        right: 518px;
+    }
+
+    .box:hover::before{
+    width: 0;
+    height: 0;
+    transition: 1s;
+    }
+
+
+
+    .box:hover::after{
+    width: 0;
+    height: 0;
+    transition: 1s;
+    
+    }
+</style>
+
+<body>
+    <div class="box">
+        <!-- <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D" -->
+            <!-- alt=""> -->
+    </div>
+</body>
+
+</html>
